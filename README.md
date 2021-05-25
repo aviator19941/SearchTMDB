@@ -1,19 +1,3 @@
----
-page_type: sample
-description: "A minimal sample app that can be used to demonstrate deploying Flask apps to Azure App Service on Linux."
-languages:
-- python
-products:
-- azure
-- azure-app-service
----
+Server-side scripting with Flask, JSON, and TMDB API. Created a web page that allows you to search for information regarding movies and TV shows using the TMDB API and the results will be displayed on cards below the search query. Upon clicking a button in the card, a modal will pop up and display more information about that selected movie/TV show. Creates XMLHttpRequests to the Flask server which in turn makes a request to the TMDB servers via the API and returns the data upon a successful response to be used to display in the web page.
 
-# Python Flask sample for Azure App Service (Linux)
-
-This is a minimal Flask app that can be deployed to Azure App Service on Linux.
-
-For instructions on running and deploying the code, see [Quickstart: Create a Python app in Azure App Service on Linux](https://docs.microsoft.com/azure/app-service/quickstart-python).
-
-## Contributing
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+https://csci571-avinash-sharma-hw6.azurewebsites.net/
