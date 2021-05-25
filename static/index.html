@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSCI 571 HW 6</title>
+        <link rel="stylesheet" href="/static/home.css">
+        <link rel="shortcut icon" href="#">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="grad"><p id="home-title">THE MOVIE DB</p></div>
+
+        <!--<div id="trending" style="color: white"></div>-->
+        
+        <div class="container">
+            <div class="left-col">
+                <ul>
+                    <li><button id="home-tab" onclick="removeHomeLine(this);" disabled="disabled">Home &nbsp; &nbsp; &nbsp; &nbsp; &#10230;</button></li>
+                    <hr class="horizontal-line" id="horizontal-line-home">
+                    <li><button id="search-tab" onclick="removeHomeLine(this);">Search &nbsp; &nbsp; &nbsp;&nbsp; &#10230;</button></li>
+                    <hr class="horizontal-line" id="horizontal-line-search">
+                    <div class="vl" id="vl"></div>
+                </ul>
+            </div>
+
+            <div class="right-col">
+                <p id="trending-title">Trending Movies</p>
+                <div class="slides" id="slides">
+                    <div class="first-slideshow" id="first-slideshow"></div>
+                    <div class="slides-footer" id="slides-footer">
+                        <p></p>
+                    </div>
+                </div>
+                
+                <p id="tv-title">TV Shows On-Air Today</p>
+                <div class="slides2" id="slides2">
+                    <div class="second-slideshow" id="second-slideshow"></div>
+                    <div class="slides-footer" id="slides-footer">
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Search tab background and form -->
+                <div class="search-area" id="search-area">
+                    <p id="search-area-text">Search</p>
+                    <form id="formcenter">
+                        <label for="fname" id="keyword-label">Keyword<span class="required">*</span></label>
+                        <input type="text" name="keyword" id="keyword"><br>
+                        <div id="category-div">
+                            <label for="category" id="category-label">Category<span class="required">*</span></label>
+                            <select name="categories" id="categories">
+                                <option value=""></option>
+                                <option value="movies">Movies</option>
+                                <option value="tv-shows">TV Shows</option>
+                                <option value="movies-and-tv-shows">Movies and TV Shows</option>
+                            </select><br>
+                        </div>
+                        <input type="submit" class="search-button" id="search-button" value="Search" onclick="sendKeywordAndCategory(this)">
+                        <input type="reset" class="clear-button" id="clear-button" value="Clear" onclick="clearTextForm()"></input>
+                        
+                    </form>
+
+                    <div class="search-container" id="search-container">
+                        <p id="show-results"></p>
+                    </div>
+                    <div id="popup-container" class="popup">
+                        <div id="popup-content" class="popup-content">
+                            <span class="close">&times;</span>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <div class="footer" id="footer">
+                    <p id="footer-text">Designed and developed by Avinash<br>
+                        Powered by TMDB
+                    </p>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <script src="/static/trending.js"></script>
+        <script src="/static/search.js"></script>
+    </body>
+</html>
